@@ -1,0 +1,84 @@
+#about {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background: #000;
+}
+
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  @media (min-width: 1392px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  & > div {
+    width: 50%;
+  }
+  &__left {
+    img {
+      width: 100%;
+    }
+  }
+  &__right {
+    padding-top: 96px;
+    padding-left: 123px;
+    * {
+      font-size: 16px;
+      line-height: 167.5%;
+      color: #ffffff;
+    }
+    h1 {
+      margin-bottom: 25px;
+      font-family: "Open Sans";
+      font-weight: 400;
+    }
+    ul {
+      list-style-type: none;
+    }
+    li {
+      font-family: "Arca Majora 3";
+      display: flex;
+      max-width: 425px;
+      margin-bottom: 16px;
+      font-weight: 700;
+      span:first-child {
+        margin-right: 10px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 167.5%;
+        color: #c2a578;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .about {
+    &__right {
+      padding-top: 24px;
+      h1 {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  #about {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background: #000;
+  }
+  .about {
+    & > div {
+      width: 100%;
+    }
+    &__right {
+      padding-left: 0px;
+      h1 {
+        margin-bottom: 16px;
+      }
+      padding-top: 24px;
+    }
+  }
+}

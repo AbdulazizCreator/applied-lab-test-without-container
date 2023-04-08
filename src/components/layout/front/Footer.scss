@@ -1,0 +1,132 @@
+@use "../../../sass/mixin" as mixin;
+
+footer {
+  padding-top: 80px;
+  background: url("../../../assets/images/footer-back.png") no-repeat center
+    left;
+  background-color: #f1f1f1;
+  @media (min-width: 1392px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-bottom: 30px;
+  &__title {
+    margin-bottom: 32px;
+    font-family: "Work Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.165em;
+    text-transform: uppercase;
+    color: #000000;
+  }
+  &__links {
+    a {
+      margin-bottom: 12px;
+      display: block;
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 167.5%;
+      color: #7e7e7e;
+    }
+  }
+  &__start {
+    @media (min-width: 1392px) {
+      padding-left: 115px;
+    }
+    form {
+      max-width: 460px;
+      position: relative;
+    }
+    input {
+      width: 100%;
+      padding-bottom: 16px;
+      border: none;
+      border-bottom: 1px solid #c4c4c4;
+      background-color: transparent;
+      &::placeholder {
+        font-family: "Work Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 141.8%;
+        color: #000000;
+        opacity: 0.5;
+      }
+      &::-moz-placeholder {
+        font-family: "Work Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 141.8%;
+        color: #000000;
+        opacity: 0.5;
+      }
+    }
+    button {
+      position: absolute;
+      right: 0;
+      background-color: transparent;
+      border: none;
+    }
+  }
+  &__social {
+    margin-top: 28px;
+    @include mixin.df-ai;
+    a {
+      @include mixin.df-ai;
+      margin-right: 18px;
+    }
+  }
+  &__end {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.footer-bottom {
+  padding: 24px;
+  p {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 167.5%;
+    text-align: center;
+    color: #c4c4c4;
+  }
+}
+
+@media (max-width: 1000px) {
+  footer {
+    background: url("../../../assets/images/footer-back-mobile.png") no-repeat
+      bottom center;
+    background-color: #f1f1f1;
+  }
+  .footer {
+    display: grid;
+    grid-template-columns: auto;
+    &__start {
+      margin-bottom: 42px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .footer {
+    &__end {
+      grid-template-columns: auto;
+      & > div:first-child {
+        margin-bottom: 25px;
+      }
+    }
+  }
+}

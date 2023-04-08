@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url("./assets/fonts/oswald/Oswald-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url("./assets/fonts/oswald/Oswald-ExtraLight.ttf");
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url("./assets/fonts/oswald/Oswald-Light.ttf");
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url("./assets/fonts/oswald/Oswald-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url("./assets/fonts/oswald/Oswald-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url("./assets/fonts/oswald/Oswald-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url("./assets/fonts/oswald/Oswald-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("./assets/fonts/open sans/OpenSans-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("./assets/fonts/open sans/OpenSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Arca Majora 3";
+  src: url("./assets/fonts/arca majora/ArcaMajora3-Bold.otf");
+}
+
+@font-face {
+  font-family: "Arca Majora 3";
+  src: url("./assets/fonts/arca majora/ArcaMajora3-Heavy.otf");
+}
+
+@font-face {
+  font-family: "Work Sans";
+  src: url("./assets/fonts/work sans/WorkSans-Regular.ttf");
+}
+
+@media (max-width: 1392px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+input:focus {
+  outline: none;
+}

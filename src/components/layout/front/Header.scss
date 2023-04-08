@@ -1,0 +1,146 @@
+@use "../../../sass/mixin" as mixin;
+
+$lineY: 4.2px;
+$navTransition: 0.5s;
+
+.top-header {
+  @include mixin.df-ai;
+  justify-content: center;
+  height: 32px;
+  background: #f1f1f1;
+  a {
+    font-family: "Oswald";
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 168%;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #000000;
+  }
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 16px;
+  border: none;
+  background-color: transparent;
+  span {
+    display: inline-block;
+    background-color: black;
+    height: 1px;
+    width: 16px;
+    transition: $navTransition;
+    -webkit-transition: $navTransition;
+    -moz-transition: $navTransition;
+    -ms-transition: $navTransition;
+    -o-transition: $navTransition;
+  }
+  &-close {
+    span {
+      &:first-child {
+        transform: rotate(45deg) translateY($lineY);
+        -webkit-transform: rotate(45deg) translateY($lineY);
+        -moz-transform: rotate(45deg) translateY($lineY);
+        -ms-transform: rotate(45deg) translateY($lineY);
+        -o-transform: rotate(45deg) translateY($lineY);
+      }
+      &:nth-child(2) {
+        display: none;
+      }
+      &:last-child {
+        transform: rotate(-45deg) translateY(-$lineY);
+        -webkit-transform: rotate(-45deg) translateY(-$lineY);
+        -moz-transform: rotate(-45deg) translateY(-$lineY);
+        -ms-transform: rotate(-45deg) translateY(-$lineY);
+        -o-transform: rotate(-45deg) translateY(-$lineY);
+      }
+    }
+  }
+}
+
+nav {
+  height: 52px;
+  background-color: #fff;
+  @media (min-width: 1392px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.nav {
+  @include mixin.df-ai;
+  justify-content: space-between;
+  height: 100%;
+  &__logo {
+    a {
+      @include mixin.df-ai;
+    }
+  }
+  &__list {
+    display: flex;
+    list-style-type: none;
+  }
+  &__item {
+    margin: 0 20px;
+  }
+  &__link {
+    font-family: "Open Sans";
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    letter-spacing: 0.175em;
+    text-transform: uppercase;
+    color: #000000;
+  }
+  &__icons {
+    a {
+      margin-left: 20px;
+    }
+  }
+}
+
+.nav-shrink {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+@media (max-width: 850px) {
+  .hamburger {
+    display: flex;
+  }
+  .nav {
+    height: 48px;
+    &__list {
+      position: fixed;
+      flex-direction: column;
+      top: 0;
+      right: min(-200px, -50%);
+      bottom: 0;
+      width: max(200px, 50%);
+      background-color: black;
+      transition: $navTransition cubic-bezier(0.07, 0.96, 0.06, 0.99);
+      -webkit-transition: $navTransition cubic-bezier(0.07, 0.96, 0.06, 0.99);
+      -moz-transition: $navTransition cubic-bezier(0.07, 0.96, 0.06, 0.99);
+      -ms-transition: $navTransition cubic-bezier(0.07, 0.96, 0.06, 0.99);
+      -o-transition: $navTransition cubic-bezier(0.07, 0.96, 0.06, 0.99);
+      &.show {
+        right: 0;
+      }
+    }
+    &__link {
+      display: inline-block;
+      margin: 20px 0;
+      color: white;
+    }
+    &__icons {
+      a:not(a:nth-child(3)) {
+        display: none;
+      }
+    }
+  }
+}

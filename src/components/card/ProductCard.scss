@@ -1,0 +1,47 @@
+.product-card {
+  &__body {
+    position: relative;
+    img {
+      width: 100%;
+    }
+    span {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      display: inline-block;
+      padding: 4px 7px;
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 167.5%;
+      color: #000000;
+      background: #ffffff;
+    }
+  }
+  &__footer {
+    h2,
+    p {
+      font-family: "Oswald";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 168%;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+    h2 {
+      margin: 8px 0;
+      color: #000000;
+    }
+    &__rating {
+      img {
+        margin-right: 4px;
+      }
+    }
+    p {
+      margin-top: 8px;
+      color: #353535;
+    }
+  }
+}
